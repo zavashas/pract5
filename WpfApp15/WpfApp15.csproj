@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FB805B0-32B6-4C4E-B92D-AFE18C2DEFD9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WpfApp15</RootNamespace>
+    <AssemblyName>WpfApp15</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=3.0.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.3.0.0\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=5.0.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.5.0.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BuyPage.xaml.cs">
+      <DependentUpon>BuyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CategoryPage.xaml.cs">
+      <DependentUpon>CategoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheksPage.xaml.cs">
+      <DependentUpon>CheksPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataPage.xaml.cs">
+      <DependentUpon>DataPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DiscountsPage.xaml.cs">
+      <DependentUpon>DiscountsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FurniturePage.xaml.cs">
+      <DependentUpon>FurniturePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet.cs">
+      <DependentUpon>FurnitureStore3DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet12.cs">
+      <DependentUpon>FurnitureStore3DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ManufacturersPage.xaml.cs">
+      <DependentUpon>ManufacturersPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RolePage.xaml.cs">
+      <DependentUpon>RolePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesPage.xaml.cs">
+      <DependentUpon>ServicesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SkladPage.xaml.cs">
+      <DependentUpon>SkladPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SkladWindow.xaml.cs">
+      <DependentUpon>SkladWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsersPage.xaml.cs">
+      <DependentUpon>UsersPage.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BuyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CategoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CheksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DiscountsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FurniturePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KassirWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FurnitureStore3DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FurnitureStore3DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="KassirWindow.xaml.cs">
+      <DependentUpon>KassirWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ManufacturersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RolePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ServicesPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SkladPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SkladWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="FurnitureStore3DataSet.xsc">
+      <DependentUpon>FurnitureStore3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet.xss">
+      <DependentUpon>FurnitureStore3DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet1.xsc">
+      <DependentUpon>FurnitureStore3DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet1.xss">
+      <DependentUpon>FurnitureStore3DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet10.xsc">
+      <DependentUpon>FurnitureStore3DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet10.xss">
+      <DependentUpon>FurnitureStore3DataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet11.xsc">
+      <DependentUpon>FurnitureStore3DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet11.xss">
+      <DependentUpon>FurnitureStore3DataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet12.xsc">
+      <DependentUpon>FurnitureStore3DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet12.xss">
+      <DependentUpon>FurnitureStore3DataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet13.xsc">
+      <DependentUpon>FurnitureStore3DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet13.xss">
+      <DependentUpon>FurnitureStore3DataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet14.xsc">
+      <DependentUpon>FurnitureStore3DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet14.xss">
+      <DependentUpon>FurnitureStore3DataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet2.xsc">
+      <DependentUpon>FurnitureStore3DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet2.xss">
+      <DependentUpon>FurnitureStore3DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet3.xsc">
+      <DependentUpon>FurnitureStore3DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet3.xss">
+      <DependentUpon>FurnitureStore3DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet4.xsc">
+      <DependentUpon>FurnitureStore3DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet4.xss">
+      <DependentUpon>FurnitureStore3DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet5.xsc">
+      <DependentUpon>FurnitureStore3DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet5.xss">
+      <DependentUpon>FurnitureStore3DataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet6.xsc">
+      <DependentUpon>FurnitureStore3DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet6.xss">
+      <DependentUpon>FurnitureStore3DataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet7.xsc">
+      <DependentUpon>FurnitureStore3DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet7.xss">
+      <DependentUpon>FurnitureStore3DataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet8.xsc">
+      <DependentUpon>FurnitureStore3DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet8.xss">
+      <DependentUpon>FurnitureStore3DataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet9.xsc">
+      <DependentUpon>FurnitureStore3DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="FurnitureStore3DataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FurnitureStore3DataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FurnitureStore3DataSet9.xss">
+      <DependentUpon>FurnitureStore3DataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.5.0.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

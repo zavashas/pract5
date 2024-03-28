@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp15.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp15"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="300" Width="400" Background="#FFBDAAAA">
+    <Grid Height="240" Width="350" Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Авторизация" FontSize="14" Cursor="AppStarting" IsEnabled="False" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF653030"/>
+        <TextBox Grid.Row="1"
+  x:Name="LoginTbx"
+  materialDesign:HintAssist.Hint="Логин" VerticalAlignment="Top" Width="340">
+        </TextBox>
+        <StackPanel Grid.Row="2" Width="340">
+            <PasswordBox x:Name="PasswordTbx"
+    Style="{StaticResource MaterialDesignRevealPasswordBox}"
+    materialDesign:HintAssist.Hint="Пароль"
+    materialDesign:TextFieldAssist.HasClearButton="True"
+    />
+        </StackPanel>
+        <Button Click="Button_Click" Grid.Row="3" Width="300" Background="#FF8D5757" BorderBrush="#FF653030" Content="Авторизоваться"></Button>
+    </Grid>
+</Window>

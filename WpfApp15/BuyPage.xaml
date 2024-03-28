@@ -1,0 +1,65 @@
+﻿<Page x:Class="WpfApp15.BuyPage"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp15"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="1000"
+      Title="BuyPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Ваши текущие элементы управления -->
+
+        <TextBox x:Name="OrderIdTextBox" Grid.Row="0" Grid.Column="1" materialDesign:HintAssist.Hint="Номер заказа"/>
+
+        <ComboBox x:Name="FurnitureComboBox" Grid.Row="1" Grid.Column="1" materialDesign:HintAssist.Hint="Мебель"/>
+
+        <TextBox x:Name="FurnitureQuantityTextBox" Grid.Row="2" Grid.Column="1" materialDesign:HintAssist.Hint="Количество мебели"/>
+
+        <ComboBox x:Name="ServicesComboBox" Grid.Row="3" Grid.Column="1" materialDesign:HintAssist.Hint="Услуги"/>
+
+        <TextBox x:Name="ServiceQuantityTextBox" Grid.Row="4" Grid.Column="1" materialDesign:HintAssist.Hint="Количество услуг"/>
+
+        <DatePicker x:Name="OrderDatePicker" Grid.Row="5" Grid.Column="1" materialDesign:HintAssist.Hint="Дата заказа"/>
+
+        <Button Content="Добавить заказ" Grid.Row="6"   HorizontalAlignment="Left"/>
+        <Button Content="Выгрузить чек" Grid.Row="6"   HorizontalAlignment="Right"/>
+
+        <!-- Новые элементы управления -->
+
+        <ComboBox x:Name="UserComboBox" Grid.Row="0" Grid.Column="3" Margin="10" materialDesign:HintAssist.Hint="Пользователь"/>
+
+        <TextBox x:Name="SumMoneyClientTextBox" Grid.Row="1" Grid.Column="3" Margin="10" materialDesign:HintAssist.Hint="Сумма клиента"/>
+
+        <TextBox x:Name="PriceServiceTextBox" Grid.Row="2" Grid.Column="3" Margin="10" materialDesign:HintAssist.Hint="Цена услуги" IsReadOnly="True"/>
+
+        <TextBox x:Name="PriceFurnitureTextBox" Grid.Row="3" Grid.Column="3" Margin="10" materialDesign:HintAssist.Hint="Цена мебели" IsReadOnly="True"/>
+
+        <TextBox x:Name="ChangeTextBox" Grid.Row="4" Grid.Column="3" Margin="10" materialDesign:HintAssist.Hint="Сдача" IsReadOnly="True"/>
+
+        <TextBox x:Name="TotalPriceTextBox" Grid.Row="5" Grid.Column="3" Margin="10" materialDesign:HintAssist.Hint="Общая сумма заказа" IsReadOnly="True"/>
+
+        <Button Content="Вычислить" Grid.Row="6" Grid.Column="0" Margin="10"/>
+        <DataGrid x:Name="ViewGrd" Grid.RowSpan="5" AutoGenerateColumns="True" ItemsSource="{Binding}"/>
+    </Grid>
+
+</Page>
